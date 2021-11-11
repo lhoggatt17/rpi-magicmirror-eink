@@ -1,22 +1,131 @@
-/*****************************************************
- * Magic Mirror                                      *
- * Custom CSS                                        *
- *                                                   *
- * By Michael Teeuw http://michaelteeuw.nl           *
- * MIT Licensed.                                     *
- *                                                   *
- * Add any custom CSS below.                         *
- * Changes to this files will be ignored by GIT. *
- *****************************************************/
+body {
+  margin: 5px;
+  height: calc(100% - 10px) !important;
+  width: calc(100% - 10px) !important;
+}
 
-/*!
- *  Hack typeface https://github.com/source-foundry/Hack
- *  License: https://github.com/source-foundry/Hack/blob/master/LICENSE.md
- */
-/* FONT PATHS
- * -------------------------- */
+html, body, .bright, .light, .normal, .medium, .dimmed, .today, .calendar-header-day, header {
+  color: black !important;
+  background: white !important;
+  -webkit-font-smoothing: none !important;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+  font-family: "cherry13";
+  font-weight: 700;
+  font-size: 13px !important;
+}
 
-/* Cherry */
+.small, .xsmall, .medium, .large {
+  line-height: normal !important;
+  font-size: 13px !important;
+}
+
+.fa {
+  -webkit-font-smoothing: none;
+}
+
+header {
+  font-weight: bold;
+  color: red !important;
+}
+
+.compliments > div > div {
+  /*color: black !important;*/
+  color: red !important;
+  font-weight: 400 !important;
+  font-size: 40px !important;
+}
+
+.xlarge {
+  line-height: 30px !important;
+  font-size: 13px !important;
+}
+
+
+
+
+
+/** Clock **/
+  /* Only show the date, not the time */
+.module.clock .time {
+  display: none;
+}
+
+
+
+
+/** Calendar Monthly **/
+.calendar_monthly {
+  /* width: 280px; */
+}
+
+.square-box {
+  /* One day box */
+  width: 100%;
+}
+
+.monthPrev, .monthNext {
+  /* Color of the days of the previous month */
+  color: black;
+}
+
+.today {
+  /* Border of the current day */
+  border: 1px solid red !important;
+}
+
+.footer {
+  display: none;
+}
+
+
+
+
+/** Weather **/
+.currentweather {
+  /* width: 280px; */
+}
+
+.calendar-header-day {
+  padding-top: 0px !important;
+}
+
+#calendar-table {
+  padding: 0px !important;
+}
+
+.wi {
+  font-weight: normal !important;
+  font-family: "weathericons" !important;
+  line-height: normal !important;
+}
+
+#module_2_currentweather > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(4) {
+  /* Space character between the weather icons */
+  font-weight: normal !important;
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+
+.module {
+  margin-bottom: 10px !important;
+}
+
+.day {
+  padding-right: 5px !important;
+}
+
+.weather-icon {
+  padding-right: 5px !important;
+}
+
+.min-temp {
+  padding-left: 5px !important;
+}
+
+
+
+
+/* Font Definitions */
 @font-face {
   font-family: 'cherry10';
   src: url('fonts/cherry-10-r.ttf')  format('truetype');
@@ -45,81 +154,4 @@
   font-style: normal;
 }
 
-header, body, .light, .medium {
-  -webkit-font-smoothing: none !important;
-  font-family: "cherry11";
-  font-weight: 400;
-  color: #fff;
-  font-size: 11px !important;
-}
 
-body {
-  width: calc(100% - 4px);
-  margin: 6px;
-}
-
-.normal, .bright{
-  color: #fff;
-}
-
-.small, .small .light {
-  font-family: "cherry10";
-  font-size: 10px !important;
-  line-height: 1.2em;
-}
-
-header {
-  font-size: 1em;
-  border-bottom: none;
-  line-height: 1.2em;
-  margin-bottom: 4px;
-}
-
-.container > .module:not(:last-child) {
-  border-bottom: 1px solid white;
-}
-
-.module {
-  margin-bottom: 20px;
-  padding-bottom: 7px;
-}
-/* Font Awesome */
-.fa {
-  -webkit-font-smoothing: none;
-}
-
-/* Clock Module */
-.module.clock .date {
-  font-family: "cherry13";
-  font-size: 13px !important;
-  font-weight: 700;
-}
-.module.clock .time {
-  display: none;
-}
-
-/* weatherforecast */
-.weatherforecast table {
-  width: fit-content;
-}
-
-/* MMM-Reddit */
-#mmm-reddit-slider .table td {
-  margin-right: 5px;
-  text-align: left;
-  font-size: 1em;
-  line-height: 1.1em !important;
-}
-#mmm-reddit-slider .table td.details {
-  display: inline-block;
-  font-size: 1em;
-}
-
-#mmm-reddit-slider .table tr {
-  display: block;
-}
-/* MMM-CoinMarketCap */
-.MMM-CoinMarketCap td.cell-priceWithChanges .changesPart,
-.MMM-CoinMarketCap td.cell-changes {
-  font-size: 1em;
-}
